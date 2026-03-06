@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Está é a primeira versâo idealizada para o desafio_novato
+
 struct Carta {
     char Estado[3];
     char Codigo[4]; 
