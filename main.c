@@ -11,6 +11,8 @@ struct Carta {
     double area;
     double pib;
     int numPontoTuristico;
+    float densidadePopulacional;
+    float pibPerCapta;
 };
   
 int sair() {
@@ -26,6 +28,8 @@ int sair() {
     printf("\nVoce digitou '%c'. Saindo do programa...\n", opcao);
     exit(0);
 }
+
+
 
 int main() {
    system("clear");
@@ -55,6 +59,9 @@ int main() {
 
         printf("Numero de Pontos Turisticos: \n");
         scanf("%d", &carta[i].numPontoTuristico);
+
+       carta[i].densidadePopulacional = (carta[i].populacao / carta[i].area);
+       carta[i].pibPerCapta = (carta[i].pib / carta[i].populacao);
     }
     
     system("clear");
@@ -69,7 +76,9 @@ int main() {
         printf("Populacao: %d\n", carta[i].populacao);
         printf("Area: %.2lf\n", carta[i].area);
         printf("PIB: %.2lf\n", carta[i].pib);
-        printf("Numero de Pontos Turisticos: %d\n\n\n", carta[i].numPontoTuristico);
+        printf("Numero de Pontos Turisticos: %d\n", carta[i].numPontoTuristico);
+        printf("Densidade Poplacional: %f\n", carta[i].densidadePopulacional);
+        printf("PIB per Capta: %f\n", carta[i].pibPerCapta);
     }
     printf("---------------------------------\n\n");
    
